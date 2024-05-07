@@ -1,9 +1,9 @@
-# Statistikbasens API
+# Statistikdatabasens API
 # Syfte: Hämta extern data
 
 # Ladda in nödvändiga bibliotek
 library(pxweb)
-
+library(ggplot2)
 
 min_data <- interactive_pxweb()
 
@@ -27,7 +27,6 @@ str(px_data_frame)
 px_data_frame$år <- as.numeric(px_data_frame$år)
 px_data_frame$ägarkategori <- as.factor(px_data_frame$ägarkategori)
 
-library(ggplot2)
 
 # Filtrera data för de specifika ägarkategorierna
 filtered_data <- px_data_frame %>%
